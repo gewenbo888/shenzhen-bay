@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+
+html, body {
+  background: #03050d;
+  color: #e8f0ff;
+  font-family: "Rajdhani", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+::selection { background: rgba(0, 224, 255, 0.32); color: #03050d; }
+
+/* Cosmic field: night Shenzhen with deep teal and magenta glows */
+.nightbay-field {
+  position: fixed; inset: 0; z-index: -3;
+  background:
+    radial-gradient(ellipse 1100px 800px at 18% 10%,  rgba(0, 224, 255, 0.20), transparent 60%),
+    radial-gradient(ellipse 900px  700px at 88% 25%,  rgba(255, 45, 202, 0.18), transparent 65%),
+    radial-gradient(ellipse 1300px 700px at 50% 100%, rgba(255, 170, 0, 0.10), transparent 70%),
+    linear-gradient(180deg, #03050d 0%, #060a1a 30%, #03050d 80%, #02030a 100%);
+}
+
+/* Tactical grid backdrop */
+.tac-grid {
+  position: fixed; inset: 0; z-index: -2; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(0,224,255,0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,224,255,0.07) 1px, transparent 1px);
+  background-size: 64px 64px, 64px 64px;
+  mask-image: radial-gradient(ellipse 75% 65% at 50% 45%, #000 30%, transparent 90%);
+  -webkit-mask-image: radial-gradient(ellipse 75% 65% at 50% 45%, #000 30%, transparent 90%);
+}
+
+/* Scanline overlay */
+.scanlines::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: repeating-linear-gradient(180deg, rgba(255,255,255,0.018) 0 1px, transparent 1px 3px);
+  mix-blend-mode: overlay;
+}
+
+/* Hologram glass */
+.holo {
+  background: linear-gradient(180deg, rgba(0,224,255,0.06), rgba(0,224,255,0.015));
+  border: 1px solid rgba(0,224,255,0.22);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04), 0 0 30px -10px rgba(0,224,255,0.4);
+}
+.holo-magenta {
+  background: linear-gradient(180deg, rgba(255,45,202,0.06), rgba(255,45,202,0.015));
+  border: 1px solid rgba(255,45,202,0.25);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  box-shadow: 0 0 30px -10px rgba(255,45,202,0.45);
+}
+.holo-amber {
+  background: linear-gradient(180deg, rgba(255,170,0,0.06), rgba(255,170,0,0.015));
+  border: 1px solid rgba(255,170,0,0.3);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  box-shadow: 0 0 30px -10px rgba(255,170,0,0.4);
+}
+
+/* Corner brackets — used to frame HUD panels */
+.bracket { position: relative; }
+.bracket::before, .bracket::after,
+.bracket > .br-tr, .bracket > .br-bl {
+  content: ""; position: absolute; width: 14px; height: 14px;
+  border: 1px solid currentColor; opacity: 0.85; pointer-events: none;
+}
+.bracket::before    { top: -1px;  left: -1px;  border-right: none; border-bottom: none; }
+.bracket::after     { bottom: -1px; right: -1px; border-left: none; border-top: none; }
+.bracket > .br-tr   { top: -1px;  right: -1px;  border-left: none; border-bottom: none; }
+.bracket > .br-bl   { bottom: -1px; left: -1px; border-right: none; border-top: none; }
+
+/* Glitch text */
+.glitch {
+  position: relative;
+  animation: glitch 2.4s steps(8, end) infinite;
+}
+
+/* Neon button */
+.neon-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2.25rem;
+  font-family: "Orbitron", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: #03050d;
+  background: linear-gradient(120deg, #00e0ff 0%, #7df0ff 60%, #00e0ff 100%);
+  border: 1px solid rgba(255,255,255,0.4);
+  clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+  box-shadow: 0 0 0 1px rgba(0,224,255,0.4), 0 0 30px rgba(0,224,255,0.45), inset 0 0 16px rgba(255,255,255,0.45);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+.neon-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 0 1px rgba(0,224,255,0.6), 0 0 60px rgba(0,224,255,0.6), inset 0 0 24px rgba(255,255,255,0.55);
+}
+.neon-btn-secondary {
+  background: transparent;
+  color: #00e0ff;
+  border: 1px solid rgba(0,224,255,0.5);
+  box-shadow: inset 0 0 12px rgba(0,224,255,0.18), 0 0 18px rgba(0,224,255,0.18);
+}
+.neon-btn-secondary:hover {
+  color: #7df0ff;
+  box-shadow: inset 0 0 18px rgba(0,224,255,0.28), 0 0 32px rgba(0,224,255,0.32);
+}
+
+/* Eyebrow */
+.eyebrow {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: #6c75a3;
+}
+
+/* HUD plate */
+.plate {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.42em;
+  color: #3f456b;
+  text-transform: uppercase;
+}
+
+/* Display heading */
+.display {
+  font-family: "Orbitron", system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.0;
+}
+.zh-display {
+  font-family: "ZCOOL XiaoWei", "Noto Serif SC", serif;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+
+/* Hairline */
+.hairline { height: 1px; background: linear-gradient(90deg, transparent, rgba(0,224,255,0.5), rgba(255,45,202,0.5), transparent); }
+
+/* Marquee */
+.marquee { display: flex; overflow: hidden; }
+.marquee-track { display: flex; flex-shrink: 0; min-width: 200%; animation: ticker 60s linear infinite; }
+
+/* Diagonal cut card */
+.cut {
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+}
+
+/* Sticker — small label */
+.sticker {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 10px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+  background: rgba(0,224,255,0.06);
+}
+
+/* Section number tab */
+.section-tab {
+  font-family: "Orbitron", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+  letter-spacing: 0.04em;
+  color: rgba(0,224,255,0.4);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/* Vertical row separator with hue */
+.hue-rail { width: 1px; align-self: stretch; background: linear-gradient(180deg, transparent, currentColor, transparent); }

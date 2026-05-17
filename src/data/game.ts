@@ -1,0 +1,161 @@
+// ────────────────────────────────────────────────────────────────────────────
+// GAME DATA — all content for the Shenzhen Bay Protocol concept site.
+// Fictional, cinematic. Not a real product.
+// ────────────────────────────────────────────────────────────────────────────
+
+export const DISTRICTS = [
+  {
+    code: "D-01",
+    en: "Bay Bridge Span",
+    zh: "深圳湾大桥",
+    tag: "Open · Long-range",
+    body: "Twelve kilometers of suspended steel and live billboards. Drones nest in the pylons; convoys ride the lower deck. Long sightlines, no cover.",
+    bodyZh: "十二公里灯火横跨海湾。无人机栖息在塔索之间，护送车队穿过下层甲板。视线开阔，毫无掩体。",
+    color: "cyan",
+  },
+  {
+    code: "D-02",
+    en: "Qianhai Financial Glow",
+    zh: "前海金融区",
+    tag: "Vertical · Dense",
+    body: "Glass towers strobing with quote tickers. Tactical movement is up: balcony to balcony, atrium to atrium. Civilians everywhere.",
+    bodyZh: "霓虹行情滚动的玻璃塔。战术机动只能向上：从阳台跃至阳台，由中庭穿入中庭。民众密集，禁止误伤。",
+    color: "magenta",
+  },
+  {
+    code: "D-03",
+    en: "Shekou Smartport",
+    zh: "蛇口智慧港",
+    tag: "Industrial · Mixed-cover",
+    body: "Autonomous cranes, stacked containers, robotic AGVs. Ideal for ambushes; hazardous for callouts — the port's own AI listens.",
+    bodyZh: "无人吊机、堆叠集装箱、自走 AGV。最佳伏击场，但港口 AI 同时监听一切呼号。",
+    color: "amber",
+  },
+  {
+    code: "D-04",
+    en: "Futian Civic Core",
+    zh: "福田市政核心",
+    tag: "Restricted · No-fire",
+    body: "Government plazas under permanent drone canopy. EMP-locked airspace. Only soft tools work — hacking, deception, persuasion.",
+    bodyZh: "市政广场长期处于无人机穹顶之下。EMP 锁空。可用工具只剩入侵、欺骗、说服。",
+    color: "cyan",
+  },
+  {
+    code: "D-05",
+    en: "Nanshan Rooftop Belt",
+    zh: "南山天际带",
+    tag: "Vertical · Parkour",
+    body: "Sixty connected high-rises wired with maglev catwalks. Free traversal in the sky; one wrong jump and the bay is your floor.",
+    bodyZh: "六十栋高楼通过磁悬连廊串联。天空中自由穿行，跳错一步，海湾就是地面。",
+    color: "magenta",
+  },
+  {
+    code: "D-06",
+    en: "Longgang Underline",
+    zh: "龙岗地铁深线",
+    tag: "Underground · CQB",
+    body: "Twelve-track maglev grid four levels below the surface. Tight corridors, blackouts, smart turnstiles. Comms go in and out.",
+    bodyZh: "地下四层的十二轨磁悬铁路网。狭窄通道、断电、智能闸机。通信时通时断。",
+    color: "amber",
+  },
+];
+
+export const OPERATIVES = [
+  {
+    id: "01",
+    name: "Hai Long",
+    cn: "海龙",
+    role: "Frontline · Hover Assault",
+    tone: "cyan",
+    kit: ["Pulse Carbine", "Hover Sled", "Reactive Plate"],
+    upgrade: "Hover dash ignores micro-fall damage and refunds 50% of charge on slide.",
+    blurb: "Former PLA naval recon; defected from a drone-shipping cartel after they wired her armor with a kill-switch. Now leads breaches.",
+    blurbZh: "前海军侦察兵，曾被无人机走私集团植入护甲杀控芯片。叛出后专攻强袭破口。",
+  },
+  {
+    id: "02",
+    name: "Ren Bo",
+    cn: "任博",
+    role: "Cyber Specialist · Hacking",
+    tone: "magenta",
+    kit: ["Spike Deck", "Recon Drone", "Decoy Hologram"],
+    upgrade: "Hijacks neutral cameras for 18s and bounces sniper rounds off live billboards.",
+    blurb: "Built half of the bay's smart-city ML stack before going private. Reads the city the way other operators read a map.",
+    blurbZh: "曾参与建造湾区半个智慧城市 ML 栈。看湾区如他人看地图。",
+  },
+  {
+    id: "03",
+    name: "Ai Lin",
+    cn: "艾琳",
+    role: "Sniper · Cold Optics",
+    tone: "amber",
+    kit: ["Coilgun Rail", "Stabilizer Cape", "Adaptive Camo"],
+    upgrade: "First shot per engagement ignores armor; cape muffles muzzle bloom under rain.",
+    blurb: "Watch-tower veteran. Three confirmed shots through fog from the Qianhai roofline. Refuses unethical contracts.",
+    blurbZh: "瞭望塔退役射手。曾穿越前海雾气完成三发确认射击。拒绝越界合约。",
+  },
+  {
+    id: "04",
+    name: "Mei Jin",
+    cn: "梅瑾",
+    role: "Engineer · Drone Master",
+    tone: "cyan",
+    kit: ["Drone Launcher", "EMP Mine", "Mobile Shield"],
+    upgrade: "Drones recall on KO and rebuild in 6s if any teammate has a power cell.",
+    blurb: "Speaks to UAV swarms like family. Her four-drone halo is the team's eyes, ears, and occasional shield.",
+    blurbZh: "与无人机群同频。她的四机光环既是侦察，也是耳目，亦是临时护盾。",
+  },
+  {
+    id: "05",
+    name: "Jiang Yu",
+    cn: "江宇",
+    role: "Medic · Stim Cell",
+    tone: "magenta",
+    kit: ["Nano Spray", "Trauma Patch", "Stim Beacon"],
+    upgrade: "Stim beacon doubles teammate movement speed for 4s after a revive.",
+    blurb: "Bay hospital surgeon turned field medic. Carries the only stim brewed in-house with no comedown.",
+    blurbZh: "湾区医院外科医生转任战地医生。自配兴奋剂，无副作用。",
+  },
+  {
+    id: "06",
+    name: "Lu Feng",
+    cn: "陆峰",
+    role: "Heavy · Riot Suppression",
+    tone: "amber",
+    kit: ["Coil Hammer", "Riot Wall", "Backpack Reactor"],
+    upgrade: "Reactor vents EMP wash if shield drops below 20% — disables nearby drones.",
+    blurb: "Off-duty bay-bridge ironworker who walked into a hostage call and never left.",
+    blurbZh: "湾区大桥钢架工人，因一次人质事件走入战场，从此再未离开。",
+  },
+];
+
+export const ARSENAL = [
+  { tier: "T1", name: "Pulse Carbine",   zh: "脉冲卡宾",   tone: "cyan",    bullet: "Two-burst plasma · low recoil · favors mid-range CQB", stats: { range: 62, dps: 71, recoil: 28 } },
+  { tier: "T1", name: "Coilgun Rail",    zh: "线圈轨道枪", tone: "amber",   bullet: "Hyper-velocity slug · armor-piercing · 1-shot crit",   stats: { range: 96, dps: 88, recoil: 64 } },
+  { tier: "T2", name: "Arc Pistol",      zh: "弧光手枪",   tone: "cyan",    bullet: "Chain lightning · jumps to 3 targets on hit",          stats: { range: 36, dps: 52, recoil: 22 } },
+  { tier: "T2", name: "EMP Lance",       zh: "EMP 长矛",   tone: "magenta", bullet: "Disables vehicles & drones for 6s · no organic damage", stats: { range: 48, dps: 34, recoil: 18 } },
+  { tier: "T2", name: "Drone Launcher",  zh: "无人机发射器", tone: "amber", bullet: "Deploys micro-UAV swarm · 30s loiter time",            stats: { range: 70, dps: 58, recoil: 12 } },
+  { tier: "T3", name: "Holo Shield",     zh: "全息护盾",   tone: "cyan",    bullet: "Refractive plate · absorbs 1.4 MJ before collapse",    stats: { range: 0, dps: 0, recoil: 0 } },
+  { tier: "T3", name: "Stim Beacon",     zh: "兴奋信标",   tone: "magenta", bullet: "Field aura · +18% reload, +12% sprint, 8s window",     stats: { range: 12, dps: 0, recoil: 0 } },
+  { tier: "T3", name: "Coil Hammer",     zh: "线圈重锤",   tone: "amber",   bullet: "Melee finisher · staggers any non-mech in radius",     stats: { range: 4, dps: 110, recoil: 88 } },
+];
+
+export const MISSIONS = [
+  { code: "M-01", en: "Bay Extraction", zh: "湾区撤离",        time: "07:30", pri: "ALPHA", body: "VIP held in a glass tower above the bridge. Three minutes to extract before EMP curtain rises.",  bodyZh: "VIP 困于大桥之上的玻璃塔。EMP 幕墙启动前仅余三分钟。",     tone: "cyan" },
+  { code: "M-02", en: "Spike the Port", zh: "智慧港入侵",      time: "11:00", pri: "BETA",  body: "Smartport AI has gone autonomous and is selecting its own cargo. Inject the patch before sunrise.",  bodyZh: "智慧港 AI 自主选择货物。日出前注入补丁。",                 tone: "magenta" },
+  { code: "M-03", en: "Datafall",        zh: "数据坠落",       time: "01:45", pri: "ALPHA", body: "An air-gapped server is being airlifted out of Futian. Intercept the drone-train at the second checkpoint.", bodyZh: "气隙服务器正被空运出福田。在第二检查站截停无人机车列。",  tone: "amber" },
+  { code: "M-04", en: "Convoy Eclipse",  zh: "护送·日蚀",       time: "19:50", pri: "GAMMA", body: "Escort a hardened civilian through Longgang's underline during a planned blackout.",                    bodyZh: "在预定停电期间，护送加固平民穿越龙岗深线。",               tone: "cyan" },
+  { code: "M-05", en: "Drone Net",       zh: "无人机网",        time: "23:14", pri: "BETA",  body: "Hostile swarm has saturated Nanshan's rooftops. Disable the parent node hidden in the maglev catwalks.",    bodyZh: "敌方机群占据南山天际。在磁悬连廊中查找并切断母节点。",     tone: "magenta" },
+  { code: "M-06", en: "Black Lotus",     zh: "黑莲",            time: "04:02", pri: "OMEGA", body: "Optional — high-risk teardown of an AI security tower. No rescue if you miss the window.",                 bodyZh: "选作。高风险拆除一座 AI 安全塔。错过窗口，无救援。",        tone: "amber" },
+];
+
+export const HUD_TICKER = [
+  "// SBP · LIVE OPS GRID v3.42 //",
+  "DRONE-NET STATUS: NOMINAL · 网络正常",
+  "ATMOS: RAIN 22°C · 雷雨 22°C",
+  "FUTIAN AIRSPACE: EMP-LOCK ENGAGED · 福田空域 · EMP 锁定",
+  "BAY-BRIDGE: TRAFFIC 0.82 · 大桥流量 0.82",
+  "PORT-AI: BEHAVIOR DRIFT +0.04 · 港口AI 行为漂移 +0.04",
+  "NANSHAN MAGLEV: ONLINE · 南山磁悬 · 运行",
+  "FIELD CHANNEL OPEN · 联络通道开启",
+];
