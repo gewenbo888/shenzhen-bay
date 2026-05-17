@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     languages: { en: "/", "zh-CN": "/", "x-default": "/" },
   },
   openGraph: {
+    images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "Shenzhen Bay Protocol · 深圳湾行动 (fictional cinematic concept)" }],
     title: "Shenzhen Bay Protocol · 深圳湾行动",
     description:
       "High-tech operations in a future megacity. A fictional AAA cyberpunk tactical concept.",
@@ -33,6 +34,7 @@ export const metadata: Metadata = {
     alternateLocale: ["zh_CN"],
   },
   twitter: {
+    images: ["/twitter-image.png"],
     card: "summary_large_image",
     title: "Shenzhen Bay Protocol · 深圳湾行动",
     description: "Cinematic cyberpunk tactical concept set in near-future Shenzhen Bay.",
