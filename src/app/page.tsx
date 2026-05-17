@@ -111,7 +111,7 @@ function Hero() {
 
         <Reveal delay={0.25}>
           <div className="mt-14 flex flex-wrap items-center gap-5">
-            <a href="#brief" className="neon-btn">
+            <a href="/play" className="neon-btn">
               <span>开始行动</span>
               <span className="text-[10px] opacity-80">START MISSION</span>
               <span>›</span>
@@ -825,7 +825,7 @@ function FinalCTA() {
 
         <Reveal delay={0.2}>
           <div className="mt-14 flex flex-wrap justify-center items-center gap-5">
-            <a href="#brief" className="neon-btn">
+            <a href="/play" className="neon-btn">
               <span>开始行动</span>
               <span className="text-[10px] opacity-80">START MISSION</span>
               <span>›</span>
